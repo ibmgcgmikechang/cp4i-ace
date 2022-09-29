@@ -1,0 +1,256 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
+metadata:
+  creationTimestamp: "2022-09-28T13:34:13Z"
+  generation: 3
+  managedFields:
+  - apiVersion: appconnect.ibm.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:adminServerSecure: {}
+        f:createDashboardUsers: {}
+        f:designerFlowsOperationMode: {}
+        f:enableMetrics: {}
+        f:license:
+          .: {}
+          f:accept: {}
+          f:license: {}
+          f:use: {}
+        f:pod:
+          .: {}
+          f:containers:
+            .: {}
+            f:runtime:
+              .: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+        f:replicas: {}
+        f:router:
+          .: {}
+          f:timeout: {}
+        f:service:
+          .: {}
+          f:endpointType: {}
+        f:version: {}
+    manager: Mozilla
+    operation: Update
+    time: "2022-09-28T13:34:13Z"
+  - apiVersion: appconnect.ibm.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:availableReplicas: {}
+        f:conditions: {}
+        f:customImages: {}
+        f:endpoints: {}
+        f:labelSelector: {}
+        f:phase: {}
+        f:replicas: {}
+        f:supportsTraceCustomResource: {}
+        f:traceEnabled: {}
+        f:versions:
+          .: {}
+          f:available:
+            .: {}
+            f:channels: {}
+            f:versions: {}
+          f:reconciled: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2022-09-28T13:34:22Z"
+  - apiVersion: appconnect.ibm.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:barURL: {}
+        f:configurations: {}
+    manager: kubectl-edit
+    operation: Update
+    time: "2022-09-29T10:06:09Z"
+  name: ace-restapi-test
+  namespace: ace
+  resourceVersion: "676742749"
+  uid: 210108d2-4dc4-42f5-b5c8-adedaa1aeaae
+spec:
+  adminServerSecure: true
+  barURL: https://eu-de.git.cloud.ibm.com/integration-ts-pub/arch-repository/-/raw/main/ace/restapi-sample.bar
+  configurations:
+  - barauth-ace-config
+  createDashboardUsers: true
+  designerFlowsOperationMode: disabled
+  enableMetrics: true
+  license:
+    accept: true
+    license: L-APEH-CCHL5W
+    use: CloudPakForIntegrationNonProduction
+  pod:
+    containers:
+      runtime:
+        resources:
+          limits:
+            cpu: 300m
+            memory: 368Mi
+          requests:
+            cpu: 300m
+            memory: 368Mi
+  replicas: 1
+  router:
+    timeout: 120s
+  service:
+    endpointType: http
+  version: "12.0"
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2022-09-29T11:10:44Z"
+    message: integrationserver is ready
+    reason: Deployed
+    status: "True"
+    type: Ready
+  customImages: false
+  endpoints:
+  - name: http endpoint
+    type: api
+    uri: http://ace-restapi-test-http-ace.cp4i21-5b7e0d81360e5972646d63308bd04bf7-0000.eu-de.containers.appdomain.cloud
+  - name: https endpoint
+    type: api
+    uri: https://ace-restapi-test-https-ace.cp4i21-5b7e0d81360e5972646d63308bd04bf7-0000.eu-de.containers.appdomain.cloud
+  labelSelector: release=ace-restapi-test
+  phase: Ready
+  replicas: 1
+  supportsTraceCustomResource: true
+  traceEnabled: {}
+  versions:
+    available:
+      channels:
+      - licenses:
+        - displayName: IBM App Connect Enterprise 12.0.5.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CCHL5W)
+          matchesCurrentType: true
+          name: L-APEH-CCHL5W
+        name: "12.0"
+      - licenses:
+        - displayName: IBM App Connect Enterprise 12.0.5.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CCHL5W)
+          matchesCurrentType: true
+          name: L-APEH-CCHL5W
+        name: 12.0.5
+      - licenses:
+        - displayName: IBM App Connect Enterprise 12.0.5.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CCHL5W)
+          matchesCurrentType: true
+          name: L-APEH-CCHL5W
+        name: 12.0-lts
+      - licenses:
+        - displayName: IBM App Connect Enterprise 12.0.5.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CCHL5W)
+          matchesCurrentType: true
+          name: L-APEH-CCHL5W
+        name: 12.0.5-lts
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 12.0.4.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C9NCDM)
+          name: L-APEH-C9NCDM
+        - displayName: IBM App Connect Enterprise 12.0.4.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C9NCK6)
+          matchesCurrentType: true
+          name: L-APEH-C9NCK6
+        name: 12.0.4
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 12.0.3.0 - March 2022
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-KSBM-CCBK39)
+          name: L-KSBM-CCBK39
+        - displayName: IBM App Connect Enterprise 12.0.3.0 - March 2022
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-KSBM-CCBJUS)
+          matchesCurrentType: true
+          name: L-KSBM-CCBJUS
+        name: 12.0.3
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 11.0.0.18
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CEKEQ6)
+          name: L-APEH-CEKEQ6
+        - displayName: IBM App Connect Enterprise 11.0.0.18
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CEKET7)
+          matchesCurrentType: true
+          name: L-APEH-CEKET7
+        name: 11.0.0-eus
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 11.0.0.18
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CEKEQ6)
+          name: L-APEH-CEKEQ6
+        - displayName: IBM App Connect Enterprise 11.0.0.18
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CEKET7)
+          matchesCurrentType: true
+          name: L-APEH-CEKET7
+        name: 11.0.0.18-eus
+      versions:
+      - licenses:
+        - displayName: IBM App Connect Enterprise 12.0.5.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CCHL5W)
+          matchesCurrentType: true
+          name: L-APEH-CCHL5W
+        name: 12.0.5.0-r2
+      - licenses:
+        - displayName: IBM App Connect Enterprise 12.0.5.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CCHL5W)
+          matchesCurrentType: true
+          name: L-APEH-CCHL5W
+        name: 12.0.5.0-r1-lts
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 12.0.4.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C9NCDM)
+          name: L-APEH-C9NCDM
+        - displayName: IBM App Connect Enterprise 12.0.4.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C9NCK6)
+          matchesCurrentType: true
+          name: L-APEH-C9NCK6
+        name: 12.0.4.0-r2
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 12.0.4.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C9NCDM)
+          name: L-APEH-C9NCDM
+        - displayName: IBM App Connect Enterprise 12.0.4.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C9NCK6)
+          matchesCurrentType: true
+          name: L-APEH-C9NCK6
+        name: 12.0.4.0-r1
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 12.0.3.0 - March 2022
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-KSBM-CCBK39)
+          name: L-KSBM-CCBK39
+        - displayName: IBM App Connect Enterprise 12.0.3.0 - March 2022
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-KSBM-CCBJUS)
+          matchesCurrentType: true
+          name: L-KSBM-CCBJUS
+        name: 12.0.3.0-r2
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 12.0.3.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C79SB3)
+          name: L-APEH-C79SB3
+        - displayName: IBM App Connect Enterprise 12.0.3.0
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-C79J9U)
+          matchesCurrentType: true
+          name: L-APEH-C79J9U
+        name: 12.0.3.0-r1
+      - licenses:
+        - displayName: IBM App Connect Enterprise for Developers 11.0.0.18
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CEKEQ6)
+          name: L-APEH-CEKEQ6
+        - displayName: IBM App Connect Enterprise 11.0.0.18
+          link: https://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-APEH-CEKET7)
+          matchesCurrentType: true
+          name: L-APEH-CEKET7
+        name: 11.0.0.18-r1-eus
+    reconciled: 12.0.5.0-r2
