@@ -1,0 +1,30 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  creationTimestamp: "2022-09-28T13:53:55Z"
+  generation: 1
+  managedFields:
+  - apiVersion: appconnect.ibm.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:description: {}
+        f:secretName: {}
+        f:type: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2022-09-28T13:53:55Z"
+  name: barauth-ace-config
+  namespace: ace
+  resourceVersion: "674067314"
+  uid: 346c4a12-5a3a-4900-9dd7-a4e9bcad4d36
+spec:
+  description: Stores account details for Google Analytics
+  secretName: gitbar-ace
+  type: barauth
+  version: 12.0.5.0-r2
